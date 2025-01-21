@@ -3,16 +3,6 @@ import spacy
 import pandas as pd
 import pdfplumber
 import os
-import spacy
-import os
-
-# Ensure the SpaCy model is available
-if not os.path.exists(spacy.util.get_package_path("en_core_web_sm", allow_null=True)):
-    from spacy.cli import download
-    download("en_core_web_sm")
-
-nlp = spacy.load("en_core_web_sm")
-
 
 def extract_text_from_pdf(pdf_path):
     """
