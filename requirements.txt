@@ -1,3 +1,4 @@
+pip>=24.3.1
 streamlit
 spacy==3.5.0
 en-core-web-sm==3.5.0
