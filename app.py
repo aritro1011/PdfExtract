@@ -1,6 +1,18 @@
 import streamlit as st
 import pandas as pd
 from main import extract_text_from_pdf, extract_multiple_details  # Import functions from main.py
+import spacy
+from spacy.cli import download
+import os
+
+# Check if the model is available, if not, download it
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    print("Model not found. Downloading the 'en_core_web_sm' model...")
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 # Streamlit Web App
 st.title("PDF Data Extraction Web App")
 st.write("Upload a PDF file containing structured data to extract details like Name, Phone, Address, and Role.")
