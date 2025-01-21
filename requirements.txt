@@ -1,5 +1,5 @@
-pandas
-pdfplumber
-spacy
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
 streamlit
+spacy==3.5.0
+en-core-web-sm==3.5.0
+pdfplumber==0.5.28
+pandas==1.5.3
