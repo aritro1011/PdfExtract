@@ -1,6 +1,16 @@
 import streamlit as st
 import pandas as pd
 from main import extract_text_from_pdf, extract_multiple_details  # Import functions from main.py
+import spacy
+import os
+
+# Ensure the SpaCy model is available
+if not os.path.exists(spacy.util.get_package_path("en_core_web_sm", allow_null=True)):
+    from spacy.cli import download
+    download("en_core_web_sm")
+
+nlp = spacy.load("en_core_web_sm")
+
 
 # Streamlit Web App
 st.title("PDF Data Extraction Web App")
