@@ -1,5 +1,5 @@
 streamlit
 spacy
-en-core-web-sm==3.8.0
+en-core-web-sm
 pdfplumber
 pandas
