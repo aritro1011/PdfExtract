@@ -4,15 +4,12 @@ from main import extract_text_from_pdf, extract_multiple_details  # Import funct
 import spacy
 import sys
 
-# Assuming the model is located in a 'models' directory
-model_path = "./models/en_core_web_sm-3.8.0"
+#import spacy
+import sys
+sys.path.append('models')  # Add the path to your models directory
 
-# Load the model from the directory
-try:
-    nlp = spacy.load(model_path)
-    print("Model loaded successfully.")
-except Exception as e:
-    print(f"Error loading model: {e}", file=sys.stderr)
+nlp = spacy.load("en_core_web_sm")  # Now it loads from the local folder
+
 
 # Streamlit Web App
 st.title("PDF Data Extraction Web App")
