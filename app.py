@@ -4,6 +4,10 @@ from main import extract_text_from_pdf, extract_multiple_details  # Import funct
 import spacy
 from spacy.cli import download
 import os
+import spacy
+
+# Download and load the 'en_core_web_sm' model
+spacy.cli.download('en_core_web_sm')
 
 # Streamlit Web App
 st.title("PDF Data Extraction Web App")
