@@ -1,5 +1,4 @@
 streamlit
 spacy
-en-core-web-sm
 pdfplumber
 pandas
