@@ -1,14 +1,16 @@
 import streamlit as st
 import pandas as pd
 from main import extract_text_from_pdf, extract_multiple_details  # Import functions from main.py
+import sys
 import spacy
-import sys
+from spacy.cli import download
 
-#import spacy
-import sys
-sys.path.append('models')  # Add the path to your models directory
-
-nlp = spacy.load("en_core_web_sm")  # Now it loads from the local folder
+# Try loading the model, and if not found, download it
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 
 # Streamlit Web App
